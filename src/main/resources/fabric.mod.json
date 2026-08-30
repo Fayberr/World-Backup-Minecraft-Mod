@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "worldbackup",
+	"version": "${version}",
+	"name": "World Backup",
+	"description": "High-performance, non-blocking world backups with configurable compression, intervals, retention, and commands for singleplayer and dedicated servers.",
+	"authors": [
+		"Fayber"
+	],
+	"contact": {
+		"homepage": "https://github.com/Fayberr/World-Backup-Minecraft-Mod",
+		"sources": "https://github.com/Fayberr/World-Backup-Minecraft-Mod"
+	},
+	"license": "GPL-3.0-or-later",
+	"icon": "assets/worldbackup/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.fayber.worldbackup.WorldBackupMod"
+		],
+		"modmenu": [
+			"net.fayber.worldbackup.compat.WorldBackupModMenu"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=${loader_version}",
+		"minecraft": ">=26.2 <26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*",
+		"cloth-config": "*"
+	}
+}
