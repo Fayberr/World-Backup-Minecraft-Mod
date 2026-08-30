@@ -19,7 +19,14 @@ public class BackupCommands {
 
     private static void registerCommands(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("backup")
-                .requires(source -> source.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER))
+                .requires(source -> {
+                    // In singleplayer, always permit the player even if cheats are disabled
+                    if (source.getServer().isSingleplayer()) {
+                        return true;
+                    }
+                    // On dedicated servers, require GameMaster/Operator permissions
+                    return source.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
+                })
                 .then(Commands.literal("create")
                         .executes(ctx -> {
                             BackupService.triggerBackup(ctx.getSource().getServer(), "manual");
