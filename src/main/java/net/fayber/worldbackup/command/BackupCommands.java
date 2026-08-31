@@ -21,7 +21,7 @@ public class BackupCommands {
         dispatcher.register(Commands.literal("backup")
                 .requires(source -> {
                     // In singleplayer, always permit the player even if cheats are disabled
-                    if (source.getServer().isSingleplayer()) {
+                    if (source.getServer() != null && source.getServer().isSingleplayer()) {
                         return true;
                     }
                     // On dedicated servers, require GameMaster/Operator permissions
