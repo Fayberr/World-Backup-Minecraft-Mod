@@ -13,6 +13,7 @@ base {
 repositories {
 	maven { name = 'Terraformers'; url = 'https://maven.terraformersmc.com/' }
 	maven { name = 'Shedaniel'; url = 'https://maven.shedaniel.me/' }
+	mavenLocal()
 }
 
 dependencies {
@@ -24,7 +25,11 @@ dependencies {
 
 	// ModMenu and Cloth Config
 	compileOnly "com.terraformersmc:modmenu:18.0.0"
-	compileOnly "me.shedaniel.cloth:cloth-config-fabric:26.1.154"
+	compileOnly "me.shedaniel.cloth:cloth-config-fabric:26.2.155"
+
+	// Modern Config, optional. Preferred over Cloth when installed. runtimeOnly so the dev client sees it.
+	compileOnly "net.fayber:modern-config:${project.modern_config_maven_version}"
+	runtimeOnly "net.fayber:modern-config:${project.modern_config_maven_version}"
 }
 
 processResources {

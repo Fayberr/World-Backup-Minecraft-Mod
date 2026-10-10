@@ -57,6 +57,12 @@ public final class WorldBackupClothScreen {
                 .setSaveConsumer(val -> config.notifyPlayers = val)
                 .build());
 
+        general.addEntry(eb.startBooleanToggle(Component.literal("Chat Notifications: Ops Only"), config.notifyOpsOnly)
+                .setDefaultValue(false)
+                .setTooltip(Component.literal("Send backup messages only to operators and the singleplayer host."))
+                .setSaveConsumer(val -> config.notifyOpsOnly = val)
+                .build());
+
         return builder.build();
     }
 }
