@@ -1,7 +1,7 @@
 # World Backup - Modrinth page copy
 
-Source of truth for the text on https://modrinth.com/mod/world-backup-mod.
-Update here first, then run `modrinth copy world-backup-mod modrinth-page.md`.
+Source of truth for the text on https://modrinth.com/mod/fayber-world-backup.
+Update here first, then run `modrinth copy fayber-world-backup modrinth-page.md`.
 
 ## description
 
