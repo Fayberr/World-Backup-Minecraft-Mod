@@ -3,7 +3,7 @@
 	"id": "worldbackup",
 	"version": "${version}",
 	"name": "World Backup",
-	"description": "High-performance, non-blocking world backups with configurable compression, intervals, retention, and commands for singleplayer and dedicated servers.",
+	"description": "Automatic world backups for singleplayer and servers: zip archives, retention, a status command and low impact on gameplay.",
 	"authors": [
 		"Fayber"
 	],
@@ -24,7 +24,7 @@
 	},
 	"depends": {
 		"fabricloader": ">=${loader_version}",
-		"minecraft": ">=26.2 <26.3",
+		"minecraft": "~26.3",
 		"java": ">=25",
 		"fabric-api": "*"
 	},
