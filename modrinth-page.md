@@ -33,5 +33,5 @@ Operators and the singleplayer host can use them, even with cheats off.
 
 - Backups are written to `backups/<world name>/` in the game or server folder.
 - The game pauses for as long as it takes to copy the world once, which is a few seconds on large worlds.
-- Requires Fabric API. Minecraft 26.3.
+- Requires Fabric API.
 - Config file: `config/worldbackup.json`.
